@@ -20,8 +20,11 @@ spec:
       containers:
         - name: upg-loadme
           # update image id (manual or via jenkins)
-          image: '8261XXXXXXXX.dkr.ecr.us-east-1.amazonaws.com/shashank-upg-loadme:1'
-          # limiting cpu & mem usage of a pod
+          image: '390766696249.dkr.ecr.us-east-1.amazonaws.com/my-ecr-201:latest'
+          ports:
+          - containerPort: 8081
+          
+            # limiting cpu & mem usage of a pod
           resources:
             requests:
               cpu: 800m

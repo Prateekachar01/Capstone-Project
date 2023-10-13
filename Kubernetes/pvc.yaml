@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: prateek-pvc
+  namespace: demo
+  labels:
+      type: prateek-pvc
+spec:
+  volumeName: prateek-pv
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
